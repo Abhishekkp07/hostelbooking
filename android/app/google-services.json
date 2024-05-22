@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "965984762218",
+    "project_id": "hostelbooking-13eb8",
+    "storage_bucket": "hostelbooking-13eb8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965984762218:android:9899003eb7c2e615820d13",
+        "android_client_info": {
+          "package_name": "com.hostelbooking.hostelbooking"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoYxT8kHypaI_zw0NcfqUyCTlOTWBPUsw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

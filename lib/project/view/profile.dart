@@ -8,12 +8,12 @@ void main(){
 
 class Profile extends StatelessWidget {
 
-  var profile=["Accuont","Settings","About","Details","Log Out"];
+  var profile=["phone number","address","ID NO","Settings","Log Out"];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.blue,),
+      appBar: AppBar(backgroundColor: Color(0xFF01579B),),
       body: SingleChildScrollView(
         child: Center(
           child: Column(

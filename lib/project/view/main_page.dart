@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hostelbooking/project/container2.dart';
-import 'package:hostelbooking/project/stackexm.dart';
+import 'package:hostelbooking/project/view/container2.dart';
+
+import 'package:hostelbooking/project/view/stackexm.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -32,7 +33,7 @@ class Main_page extends StatelessWidget {
           ),
 
           automaticallyImplyLeading: false,
-          backgroundColor: Colors.blue,
+          backgroundColor: Color(0xFF01579B),
             centerTitle: true,
         ),
         body: SingleChildScrollView(

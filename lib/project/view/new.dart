@@ -3,12 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'booking.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: Single_Room(),
-    debugShowCheckedModeBanner: false,
-  ));
-}
 
 class Single_Room extends StatelessWidget {
   String? image;

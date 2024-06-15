@@ -7,7 +7,8 @@ import 'login_page.dart';
 class Registration_page extends StatelessWidget {
   var email_cntrl = TextEditingController();
   var pass_cntrl = TextEditingController();
-  var cpass_cntrl = TextEditingController();
+
+  // var cpass_cntrl = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -115,8 +116,19 @@ class Registration_page extends StatelessWidget {
               height: 55,
               minWidth: 355,
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Login_page()));
+                String email = email_cntrl.text.trim();
+                String pass = pass_cntrl.text.trim();
+                FirebaseHelper()
+                    .registerUser(email: email, pwd: pass)
+                    .then((result) {
+                  if (result == null) {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Login_page()));
+                  } else {
+                    ScaffoldMessenger.of(context)
+                        .showSnackBar(SnackBar(content: Text(result)));
+                  }
+                });
               },
               child: Text(
                 "Create account",
@@ -127,10 +139,6 @@ class Registration_page extends StatelessWidget {
             SizedBox(height: 30),
             TextButton(
                 onPressed: () {
-                  String email = email_cntrl.text.trim();
-                  String pass = pass_cntrl.text.trim();
-                  FirebaseHelper().registerUser(email: email, pwd: pass);
-
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Login_page()));
                 },

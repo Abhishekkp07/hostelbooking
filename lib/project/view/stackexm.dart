@@ -1,11 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: Contanier1(),
-  ));
-}
 
 class Contanier1 extends StatelessWidget {
   var images = [

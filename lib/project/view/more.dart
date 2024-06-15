@@ -6,13 +6,6 @@ import 'package:hostelbooking/project/view/profile.dart';
 import 'Rules.dart';
 import 'facilities.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: More_details(),
-    debugShowCheckedModeBanner: false,
-  ));
-}
-
 class More_details extends StatelessWidget {
   const More_details({super.key});
 

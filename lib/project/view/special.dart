@@ -4,14 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'booking.dart';
 
-
-void main() {
-  runApp(MaterialApp(
-    home: Special(),
-    debugShowCheckedModeBanner: false,
-  ));
-}
-
 class Special extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

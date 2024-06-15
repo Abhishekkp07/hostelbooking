@@ -5,12 +5,6 @@ import 'package:hostelbooking/project/view/container2.dart';
 
 import 'package:hostelbooking/project/view/stackexm.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: Main_page(),
-    debugShowCheckedModeBanner: false,
-  ));
-}
 
 class Main_page extends StatelessWidget {
   const Main_page({super.key});

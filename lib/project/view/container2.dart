@@ -4,11 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:hostelbooking/project/view/booking.dart';
 import 'new.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: Container(),
-  ));
-}
+
 
 class Container2 extends StatelessWidget {
   var rooms = [

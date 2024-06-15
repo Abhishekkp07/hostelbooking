@@ -2,18 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hostelbooking/project/view/registration_page.dart';
 
+import '../fire_functions/functions.dart';
 import 'Home.dart';
-
-void main() {
-  runApp(MaterialApp(
-    home: Login_page(),
-    debugShowCheckedModeBanner: false,
-  ));
-}
 
 class Login_page extends StatelessWidget {
 
-  var name_cntrl= TextEditingController();
+  var email_cntrl= TextEditingController();
   var pass_cntrl= TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -50,7 +44,7 @@ class Login_page extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 25, right: 25, bottom: 25),
               child: TextFormField(
-                controller: name_cntrl,
+                controller: email_cntrl,
                 style: TextStyle(color: Color(0xff3C3C43)),
                 decoration: InputDecoration(
                     contentPadding: EdgeInsets.symmetric(vertical: 18),
@@ -98,8 +92,21 @@ class Login_page extends StatelessWidget {
               height: 55,
               minWidth: 355,
               onPressed: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Home()));
+                String email = email_cntrl.text.trim();
+                String pass = pass_cntrl.text.trim();
+                FirebaseHelper()
+                    .loginUser(email: email, pwd: pass)
+                    .then((result) {
+                  if (result == null) {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Home()));
+                  } else {
+                    ScaffoldMessenger.of(context)
+                        .showSnackBar(SnackBar(content: Text(result)));
+                  }
+                });
+
+
               },
               child: Text(
                 "LOGIN",
